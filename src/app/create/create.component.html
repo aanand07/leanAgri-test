@@ -1,0 +1,6 @@
+<label>Title</label><input type="text" #title><br>
+<label>Body</label><input type="text" #body><br>
+<label>UserId</label><input type="number" #userId><br>
+<button (click)="createdataFunc(title.value, body.value, userId.value)" class="btn btn-success">
+  Create
+</button>

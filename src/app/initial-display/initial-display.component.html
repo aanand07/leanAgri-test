@@ -1,0 +1,16 @@
+<a routerLink="/create">Create a post</a><br>
+<button class="btn btn-primary" (click)="getPostFunc()">Get Posts</button>
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>UserId</th>
+    <th>Body</th>
+    <th>Title</th>
+  </tr>
+  <tr *ngFor="let m of modelArr">
+    <td>{{m.id}}</td>
+    <td>{{m.userId}}</td>
+    <td>{{m.body}}</td>
+    <td>{{m.title}}</td>
+  </tr>
+</table>
