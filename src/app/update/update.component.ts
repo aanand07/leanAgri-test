@@ -17,8 +17,8 @@ export class UpdateComponent implements OnInit {
     this.ds.getPostDetails(this.id).subscribe(data=>{this.post=data});
     this.ds.getSub().subscribe(m=>{this.modelArr=m  });
   }
-  updatedataFunc(title: string, body: string, userid: number){
-    this.ds.updatePost(this.id, title, body, userid).subscribe(data=>{this.post1=data;
+  updatedataFunc(){
+    this.ds.updatePost(this.id, this.post.title, this.post.body, this.post.userId).subscribe(data=>{this.post1=data;
      
     let index= this.modelArr.findIndex(i=>i.id==this.id); this.modelArr[index]=this.post1;
     this.ds.save(this.modelArr);
