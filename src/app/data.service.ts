@@ -17,7 +17,7 @@ export class DataService {
     })
   };
   save(t: IModel[]){
-    this.sub.next(t); //this.sub.subscribe(m=>{console.log(787)});
+    this.sub.next(t); 
   }
   getSub() : Observable<IModel[]>{
     return this.sub.asObservable();
@@ -39,5 +39,14 @@ export class DataService {
   getPostComments(id: number): Observable<any>{
     
     return this.http.get<any>("https://jsonplaceholder.typicode.com/posts/"+id+"/comments", this.httpOptions);
+  }
+  updatePost(id: number, title: string, body: string, userid:number): Observable<IModel>{
+    return this.http.put<IModel>("https://jsonplaceholder.typicode.com/posts/"+id,
+    JSON.stringify({
+      id,
+      title,
+      body,
+      userid
+    }), this.httpOptions);
   }
 }

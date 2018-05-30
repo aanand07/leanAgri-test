@@ -1,5 +1,5 @@
 <a routerLink="/create">Create a post</a><br>
-<button class="btn btn-primary" (click)="getPostFunc()">Get Posts</button>
+<!-- <button class="btn btn-primary" (click)="getPostFunc()">Get Posts</button> -->
 <table class="table">
   <tr>
     <th>Id</th>
@@ -7,6 +7,7 @@
     <th>Body</th>
     <th>Title</th>
     <th>Details</th>
+    <th>Update</th>
   </tr>
   <tr *ngFor="let m of modelArr">
     <td>{{m.id}}</td>
@@ -14,5 +15,6 @@
     <td>{{m.body}}</td>
     <td>{{m.title}}</td>
     <td><a routerLink="details/:id" [queryParams]="{id:m.id}">Details</a></td>
+    <td><a routerLink="update/:id" [queryParams]="{id:m.id}">Update</a></td>
   </tr>
 </table>

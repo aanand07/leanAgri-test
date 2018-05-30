@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CreateComponent } from './create/create.component';
@@ -11,7 +12,7 @@ import { InitialDisplayComponent } from './initial-display/initial-display.compo
 const routes: Routes=[
   {path:'', component: InitialDisplayComponent},
   {path:'create', component: CreateComponent},
-  {path:'update', component: UpdateComponent},
+  {path:'update/:id', component: UpdateComponent, data:{  id:'id' }},
   {path:'details/:id', component: DetailComponent, data:{  id:'id' } }
 ]
 @NgModule({
@@ -25,6 +26,7 @@ const routes: Routes=[
   imports: [
     HttpClientModule,
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
