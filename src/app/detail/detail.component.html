@@ -1,3 +1,32 @@
-<p>
-  detail works!
-</p>
+<h1>Post Details</h1>
+<table class="table">
+  <tr>
+    <th>UserID</th>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <tr>
+    <td>{{id}}</td>
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.body}}</td>
+  </tr>
+</table>
+<h1>Post Comments</h1>
+<table class="table">
+  <tr>
+    <th>PostID</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+  </tr>
+  <tr *ngFor="let c of comments">
+    <td>{{id}}</td>
+    <td>{{c.id}}</td>
+    <td>{{c.name}}</td>
+    <td>{{c.email}}</td>
+    <td>{{c.body}}</td>
+  </tr>
+</table>

@@ -6,11 +6,13 @@
     <th>UserId</th>
     <th>Body</th>
     <th>Title</th>
+    <th>Details</th>
   </tr>
   <tr *ngFor="let m of modelArr">
     <td>{{m.id}}</td>
     <td>{{m.userId}}</td>
     <td>{{m.body}}</td>
     <td>{{m.title}}</td>
+    <td><a routerLink="details/:id" [queryParams]="{id:m.id}">Details</a></td>
   </tr>
 </table>
