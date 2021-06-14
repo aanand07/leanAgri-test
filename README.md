@@ -1,4 +1,6 @@
-# LeanAgriApp
+# Angular CRUD
+
+This project performs CRUD operations in Angular using jsonplaceholder apis
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
